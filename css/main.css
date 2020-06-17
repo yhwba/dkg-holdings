@@ -1,0 +1,167 @@
+#mainVisual {
+    height: 100vh;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+#mainVisual video {
+    /* position: fixed; */
+    position: absolute;
+    object-fit: cover; /*화면에 일단 끼워맞추는것 IE는 안됨*/
+    right: 0;
+    bottom: 0;
+    height: 100vh; /* 둘다줘야함*/
+    width: 100vw; /* 둘다줘야함*/
+}
+#mainVisual .txtBox {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+}
+
+#business {
+    background-image: url(../images/main/main_bg2.jpg);
+}
+/* icon을 삼등분으로 나누는 방법1 */
+#business .iconList {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#business .iconList > li {
+    display: inline-block;
+    width: 300px;
+    padding: 0 35px;
+    vertical-align: top;
+}
+/* icon을 삼등분으로 나누는 방법2 */
+
+/* #business .iconList {
+    padding-top: 30px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#business .iconList > li {
+    float: left;
+    width: 300px;
+    padding: 0 35px;
+} */
+
+#business .iconList > li img {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+}
+#business .iconList > li:hover img {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#business ul > li .subTitle {
+    font-size: 16px;
+    padding: 15px 0;
+}
+#business ul > li p {
+    font-size: 12px;
+    padding: 5px 0;
+}
+#portfolio {
+    background-image: url(../images/main/main_bg3.jpg);
+}
+
+#portfolio .imgBox ul > li {
+    display: inline-block;
+    margin: 10px 0;
+    width: 30%;
+    padding: 0 10px;
+}
+#portfolio .imgBox img {
+    width: 100%;
+}
+
+#community {
+    background-image: url(../images/main/main_bg4.jpg);
+}
+
+/*fullpage */
+#fp-nav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    opacity: 0.5;
+}
+#fp-nav ul li a span::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li a.active span::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+#fp-nav ul li:hover a span {
+    width: 4px;
+    height: 4px;
+    margin: -2px 0px 0px -2px;
+}
+
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    width: auto;
+    cursor: pointer;
+    opacity: 0.5;
+}
+#fp-nav ul li a:active .fp-tooltip {
+    opacity: 1;
+}
+#fp-nav ul li {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 20px 0;
+    position: relative;
+}
+#fp-nav ul li .fp-tooltip.fp-right {
+    right: 35px;
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+    height: 4px;
+    width: 4px;
+    margin: -2px 0 0 -2px;
+    border-radius: 100%;
+    opacity: 1;
+}
+#fp-nav ul li:last-child {
+    display: none;
+}
